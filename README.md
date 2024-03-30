@@ -46,16 +46,49 @@ Figure -02 HALF Subtractor
 4.	Create nodes for inputs and outputs to generate the timing diagram.
 
 5.	For different input combinations generate the timing diagram.
-
-
 **Program:**
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+```
+**HALF_ADDER**
 
-Developed by: RegisterNumber:*/
+module half_adder(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+
+**HALF_SUBTRACTER**
+
+module half_subtracter(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+  assign Bo = ~a & b;
+endmodule
+```
+Developed by:T MOUNISH
+
+RegisterNumber: 212223240098
 
 **RTL Schematic**
 
+**HALF_ADDER**
+![image](https://github.com/MounishT/HALF_ADDER_SUBTRACTOR/assets/138955798/8049310e-ef79-4755-b6a2-76bdff246a1a)
+
+**HALF_SUBTRACTER**
+![image](https://github.com/MounishT/HALF_ADDER_SUBTRACTOR/assets/138955798/8bc6a0fc-a4e5-49fd-b791-e6a16596f573)
+
 **Output/TIMING Waveform**
 
+**Half_adder**
+![image](https://github.com/MounishT/HALF_ADDER_SUBTRACTOR/assets/138955798/988efa0a-bf38-4d86-b453-801cd63d863a)
+
+**Half_subtracter**
+![image](https://github.com/MounishT/HALF_ADDER_SUBTRACTOR/assets/138955798/d2a1bbed-2096-44ae-a9e8-6043597634a8)
+
 **Result:**
+The program code is successfully executed.
+
+
